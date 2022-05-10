@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <script language="javascript">
+    function encriptar(){
+        // alert("encriptar");
+        var texto = document.getElementById("caja1").value;
+        
+        console.log(texto);
+
+        var resultado = "";
+
+        for(var i = 0; i < texto.length; i++) {
+            var letra = texto.charAt(i);
+            console.log(letra);
+            switch(letra) {
+                case "a" : 
+                    resultado += "ai";
+                    break;
+                case "e" : 
+                    resultado += "enter";
+                    break;
+                case "i" : 
+                    resultado += "imes";
+                    break;
+                case "o" : 
+                    resultado += "ober";
+                    break;
+                case "u" : 
+                    resultado += "ufat";
+                    break;
+                default:
+                    resultado += letra;
+            }
+        }
+
+
+        document.getElementById("caja2").value = resultado;
+
+    }
+
+
+    function desencriptar(){
+        alert("desencriptar");
+    }
+
+    </script>
+</head>
+<body>
+    a
+    <textarea id="caja1"></textarea>
+    <textarea id="caja2" readonly></textarea>
+    <button onclick="encriptar()">Encriptar</button>
+    <button onclick="desencriptar()">Desencriptar</button>
+</body>
+</html>
