@@ -45,7 +45,19 @@
 
 
     function desencriptar(){
-        alert("desencriptar");
+    //    alert("desencriptar");
+        var texto = document.getElementById("caja1").value;
+        var resultado = document.getElementById("caja2");
+        var textoDesencriptado="";
+
+        textoDesencriptado = texto.replaceAll("ai", "a");
+        textoDesencriptado = textoDesencriptado.replaceAll("enter", "e");
+        textoDesencriptado = textoDesencriptado.replaceAll("imes", "i");
+        textoDesencriptado = textoDesencriptado.replaceAll("ober", "o");
+        textoDesencriptado = textoDesencriptado.replaceAll("ufat", "u");
+
+        resultado.value = textoDesencriptado;
+
     }
 
     </script>
