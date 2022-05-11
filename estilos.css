@@ -4,3 +4,187 @@ body {
     background-color: #E9ECF8;
     color: #0A3871;
 }
+
+.contenido {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    padding: 20px;    
+}
+
+.panelA {
+    border-radius: 25px;
+    margin: 30px 0px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.panelB, .panelC {
+    background-color: white;
+    border-radius: 32px;
+    margin: 30px 0px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.panelC {
+    display: none;
+}
+
+.controles {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;    
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    border: 0;
+    width: 100%;
+    height: 200px;
+}
+
+textarea#caja1 {
+    background-color: #E9ECF8;
+    color:#0A3871;
+    height: 50vh;
+    
+}
+
+textarea#caja2 {
+    background-color: white;
+    width: 90%;
+    height: 50vh;  
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    margin: 8px;
+    padding: 24px;    
+    border: 0;
+    border-radius: 24px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px; 
+    width: 100%;  
+}
+
+.logo {
+    top: 40px;
+    left: 40px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.info_icono {
+    background-color: gray;
+    color: #E9ECF8;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.leyenda {    
+    font-size: 12px;
+    color: #495057;
+    margin: 10px auto;    
+}
+
+.btn_encriptar {
+    background-color: #0A3871;
+    color: white;
+}
+
+.btn_desencriptar {
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.btn_copiar {
+    border: 1px solid #0A3871;
+    background-color: white;
+    color: #0A3871;
+    width: 80%;
+}
+
+.munieco {
+    width: 90%;
+    display: none;
+}
+
+h2, p {
+    color: #343A40;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #0A3871;
+    opacity: 1; /* Firefox */
+    font-size: 32px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #0A3871;
+    font-size: 32px;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #0A3871;
+    font-size: 32px;
+  }
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    button {
+        width: 50%;
+    }
+
+    .controles {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;    
+    }
+    
+}
+
+@media screen 
+  and (min-device-width: 1200px)   
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .contenido {
+        display: flex;
+        flex-flow: row nowrap;       
+        justify-content: space-between; 
+    }
+
+    .panelA {
+        width: 60%;
+        margin-right: 30px;
+    }
+
+    .panelB, .panelC {
+        width: 30%;
+    }
+
+    .munieco {
+        display: inline;
+    }
+}

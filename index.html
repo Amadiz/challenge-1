@@ -21,7 +21,7 @@
 
         for(var i = 0; i < texto.length; i++) {
             var letra = texto.charAt(i);
-            console.log(letra);
+            // console.log(letra);
             switch(letra) {
                 case "a" : 
                     resultado += "ai";
@@ -46,6 +46,8 @@
 
         document.getElementById("caja2").value = resultado;
 
+        document.getElementById("panelB").style.display = "none";
+        document.getElementById("panelC").style.display = "inline";
     }
 
 
@@ -63,15 +65,46 @@
 
         resultado.value = textoDesencriptado;
 
+        document.getElementById("panelB").style.display = "none";
+        document.getElementById("panelC").style.display = "inline";  
+    }
+
+    function copiarPortapapeles() {
+        alert("Copiar en el Portapapeles");
     }
 
     </script>
 </head>
 <body>
-    <div class="logo"><img src="logo.png" alt="Logo"></div>
-    <textarea id="caja1"></textarea>
-    <textarea id="caja2" readonly></textarea>
-    <button onclick="encriptar()">Encriptar</button>
-    <button onclick="desencriptar()">Desencriptar</button>
+    <div class="contenido">
+        <div class="logo"><img src="logo.png" alt="Logo"></div>
+        <div class="panelA">            
+            <div>
+                <textarea id="caja1" maxlength="250" 
+                    placeholder="Ingrese el texto aquí" 
+                    onfocus="this.select();" 
+                    onmouseup="return false;"
+                    >fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!</textarea>
+            </div>
+            <div class="leyenda"><i class="fa fa-exclamation-circle"></i> Solo letras minúsculas y sin acento</div>
+            <div class="controles">
+                <button class="btn_encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="btn_desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+        <div id="panelB" class="panelB">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <img class="munieco" src="munieco.png" alt="Muñeco">
+            <p>
+                Ingrese el texto que desea encriptar o desencriptar
+            </p>
+        </div>
+        <div id="panelC" class="panelC">
+            <div>
+                <textarea id="caja2" readonly ></textarea>
+            </div>
+            <button class="btn_copiar" onclick="copiarPortapapeles()">Copiar</button>
+        </div>
+    </div>
 </body>
 </html>
