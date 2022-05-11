@@ -70,7 +70,15 @@
     }
 
     function copiarPortapapeles() {
-        alert("Copiar en el Portapapeles");
+        // alert("Copiar en el Portapapeles");
+        const textarea = document.createElement("textarea");
+        var resultado = document.getElementById("caja2");
+        document.body.appendChild(textarea);
+        textarea.value = resultado.value;
+        textarea.select();
+        textarea.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        document.body.removeChild(textarea); 
     }
 
     </script>
